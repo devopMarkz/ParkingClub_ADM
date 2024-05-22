@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+:root{
+    --cor-de-texto-principal: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../componentes/images/backgroundHome.png");
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-de-texto-principal);
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+    padding: 0px 2% 0px 2%;
+}
+
+.nav-bar__titulo > h1{
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-bar__menu{
+    width: 20%;
+}
+
+.nav-bar__titulo{
+    width: 20%;
+}
+
+.nav-bar__usuario{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-principal-cliente{
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-principal-cliente__fundo-cards{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 150vh;
+    height: 70vh;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    padding: 2% 0 2% 0;
+}
+
+.container-principal-cliente__fundo-cards__card{
+    width: 80%;
+    height: 130px;
+    background-color: #B8621B;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--cor-de-texto-principal);
+}
+
+.container-principal-cliente__fundo-cards__card:hover{
+    background-color: #ffffff;
+    color: #B8621B;
+    transition: 0.2s;
+}
+
+.container-principal-cliente__fundo-cards__card > img{
+    position: relative;
+    left: 20px;
+}
+
+.container-principal-cliente__fundo-cards__card > p{
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+    .nav-bar__menu{
+        width: 0%;
+    }
+    
+    .nav-bar__titulo{
+        width: 40%;
+    }
+    
+    .nav-bar__usuario{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

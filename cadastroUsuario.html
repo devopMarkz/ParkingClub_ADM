@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/cadastroUsuario.css">
+
+
+</head>
+<body>
+    <!-- Logo da empresa -->
+    <header>
+        <img src="./componentes/images/parkingClubLogo.png" alt="Logo da empresa Parking Club">
+        <div id="title">
+            <h1>Parking</h1>
+            <h1>Club Admin</h1>
+        </div>
+
+        <!-- Menu de navegação -->
+        <ul>
+            <a href="./index.html"><li> Início</li></a>
+            <a href="./cadastroUsuario.html" id="inscreva-se-btn" style="background-color: rgb(230, 115, 13);"><li>Não tem uma conta?</li></a>
+        </ul>
+    </header>
+
+    <div class="container">
+        <!--Aqui está o código HTML do formulário de cadastro-->
+        <div class="box">
+            <form action="cadastra_usuario.php" onsubmit="return validarFormulario()" method="post">
+                <fieldset>
+                    <legend><b>Cadastre-se</b></legend>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome completo</label>
+                    </div>
+        
+                    <div class="inputBox">
+                        <input type="number" name="cpf" id="cpf" class="inputUser" required>
+                        <label for="cpf" class="labelInput">CPF</label>
+                    </div>
+        
+                    <div class="inputBox">
+                        <input type="email" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">E-mail</label>
+                    </div>
+        
+                    <div class="inputBox">
+                        <input type="password" name="senha" id="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput">Senha</label>
+                    </div>
+        
+                    <div class="inputBox">
+                        <input type="password" name="confirmaSenha" id="confirmaSenha" class="inputUser" required>
+                        <label for="confirmaSenha" class="labelInput">Confirmar senha</label>
+                    </div>
+        
+                    <div class="inputBox userType">
+                        <label for="tipo_de_usuario">Tipo de Usuário: </label>
+                        <select id="tipo_de_usuario" name="tipo_de_usuario">
+                            <option value="4">Administrador</option>
+                        </select>
+                    </div>
+        
+                    <input type="submit" id="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <script src="./validaFormulario.js"></script>
+</body>
+</html>

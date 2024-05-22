@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/cadastroUsuario.css">
+    <title>Home</title>
+</head>
+<body>
+
+    <!-- Logo da empresa -->
+    <header>
+        <img src="./componentes/images/parkingClubLogo.png" alt="Logo da empresa Parking Club">
+        <div id="title">
+            <h1>Parking</h1>
+            <h1>Club Admin</h1>
+        </div>
+
+        <!-- Menu de navegação -->
+        <ul>
+            <a href="./index.html" style="color: rgb(230, 115, 13);"><li> Início</li></a>
+            <a href="./cadastroUsuario.html" id="inscreva-se-btn"><li>Não tem uma conta?</li></a>
+        </ul>
+    </header>
+
+    <!-- Informações e Login -->
+    <div class="container-main">
+        <main class="container-principal">
+
+            <div class="container-principal__login">
+                <!--Aqui está o código HTML do formulário de login-->
+                <div class="box">
+                    <form action="login_usuario.php" method="post">
+                        <fieldset>
+                            <legend><b>Login - ADM</b></legend>                    
+
+                            <div class="inputBox">
+                                <input type="email" name="email" id="email" class="inputUser" required>
+                                <label for="email" class="labelInput">E-mail</label>
+                            </div>
+
+                            <div class="inputBox">
+                                <input type="password" name="senha" id="senha" class="inputUser" required>
+                                <label for="senha" class="labelInput">Senha</label>
+                                <i class="show-password-icon" onclick="visibilidadeDaSenha('senha', this)"><img src="./componentes/images/cadeado.svg" alt="Cadeado fechado"></i>
+                            </div>
+                            
+                <!--Aqui terminar a parte do nome e email-->
+                            <input type="submit" id="submit" value="Entrar">
+                        </fieldset>
+                    </form>
+                </div>
+        </div>
+        </main>
+    </div>
+    <script>
+        function visibilidadeDaSenha(fieldId, icon) {
+            var field = document.getElementById(fieldId);
+            if (field.type === "password") {
+                // Exibir a senha
+                field.type = "text";
+                icon.innerHTML = '<img src="./componentes/images/desbloquear.svg" alt="Cadeado fechado">';
+            } else {
+                // Ocultar a senha
+                field.type = "password";
+                icon.innerHTML = '<img src="./componentes/images/cadeado.svg" alt="Cadeado aberto">';
+            }
+        }
+    </script>
+</body>
+</html>

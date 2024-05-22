@@ -1,0 +1,86 @@
+:root{
+    --cor-secundaria: rgb(230, 115, 13);
+    --fonte-principal: poppinsregular;
+}
+
+.container-principal-adm{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 78vh;
+    gap: 40px;
+    overflow: scroll;
+}
+
+.inputStyle{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    font-size: 15px;
+    color: white;
+    font-size: 15px; 
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.principal-form{
+    display: flex;
+    gap: 30px;
+}
+
+.inputStyle{
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 3px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 200px;
+    color: white;
+}
+
+.inputStyle:nth-child(5):hover{
+    color: white;
+    background-color: var(--cor-secundaria);
+    transform: scale(1.2);
+    transition: 0.3s;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+}
+
+.tabela-relatorio{
+    border-color: white;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+td, th{
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+}
+
+td{
+    font-size: 15px;
+}
+
+tr:hover{  
+    cursor: pointer;
+    td{
+    transform: scale(1.09);
+    transition: 0.2s;
+    background-color: var(--cor-secundaria);
+    }
+}
+
+.tabela-e-grafico{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.formulario-e-tabela{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
