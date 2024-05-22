@@ -35,9 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verifica a senha
         // LEMBRAR DE IMPLEMENTAR: SE TIPO DE USER FOR CLIENTE COMUM, VAI PRA UMA PÁGINA, SE FOR CLIENTE FUNCIONÁRIO, VAI PRA OUTRA PÁGINA
         if ($senha === $usuario['senha']) {
+            session_start();
+            $_SESSION['email'] = $email;
             // Senha correta - fazer login
             echo "<script>alert('Usuário autenticado com sucesso!');</script>";
-            header("Location: http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/cliente.php?email=$email");
+            header("Location: http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/cliente.php");
             // echo('<meta http-equiv="refresh" content="0;url=http://parkingclub.com.br/telaCliente/cliente.php">');
             // Aqui você pode redirecionar o usuário para uma página protegida.
         } else {

@@ -1,4 +1,7 @@
 <?php
+session_start();
+$email = $_SESSION['email'];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Conectar ao banco de dados
     $conn = mysqli_connect("localhost", "root", "aluno", "parkingClub");
@@ -67,29 +70,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <header class="nav-bar">
         <nav class="nav-bar__menu">
             <details>
+
                 <summary style="list-style: none; position: fixed; top: 30px; cursor: pointer;">
                     <img src="../componentes/images/menu-icone-cliente.svg" alt="Ícone de menu do cliente">
                 </summary>
+                
                 <p style="position: relative; top: 40px; cursor: pointer;"> 
-                <?php
-                if (isset($_GET['email'])) {
-                    $email = $_GET['email'];
-                    echo "<a href='http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/cliente.php?email=$email' style='text-decoration: none; color: white;'>Menu</a>";
-                } else{
-                    echo "<a href='http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/cliente.php?email=admin@gmail.com' style='text-decoration: none; color: white;'>Menu</a>";
-                }
-                ?>
+                    <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/cliente.php" style="text-decoration: none; color: white;">Menu</a>
                 </p>
+                
                 <p style="position: relative; top: 45px; cursor: pointer;"> 
-                <?php
-                if (isset($_GET['email'])) {
-                    $email = $_GET['email'];
-                    echo "<a href='http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorio.php?email=$email' style='text-decoration: none; color: white;'>Reserva</a>";
-                } else{
-                    echo "<a href='http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorio.php?email=admin@gmail.com' style='text-decoration: none; color: white;'>Relatórios</a>";
-                }
-                ?>
+                    <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorio.php" style="text-decoration: none; color: white;">Reserva</a>
                 </p>
+
             </details>
         </nav>
         <div class="nav-bar__titulo"> 
@@ -98,12 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="nav-bar__usuario">
             <img src="../componentes/images/user-icon-cliente.png" alt="ícone de usuário do cliente">
             <?php
-            if (isset($_GET['email'])) {
-                $email = $_GET['email'];
                 echo "<p>$email</p>";
-            } else {
-                echo "<p>admin@gmail.com</p>";
-            }
             ?> 
         </div>
     </header>
