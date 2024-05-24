@@ -28,7 +28,7 @@
                     // Captura o email passado como parâmetro GET na página de login e manda para a página de reservaVaga.php
                     if (isset($_GET['email'])) {
                         $email = $_GET['email'];
-                        echo "<a href='http://parkingclub.com.br/telaCliente/reservaVaga.php?email=$email' style='text-decoration: none; color: white;'>Reserva</a>";
+                        echo "<a href='http://parkingclub.com.br/telaCliente/reservaVaga.php?email=$email' style='text-decoration: none; color: white;'>Relatórios</a>";
                     }
                     ?>
                     </p>

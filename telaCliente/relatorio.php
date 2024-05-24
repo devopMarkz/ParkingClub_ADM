@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </p>
                 
                 <p style="position: relative; top: 45px; cursor: pointer;"> 
-                    <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorio.php" style="text-decoration: none; color: white;">Reserva</a>
+                    <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorios.php" style="text-decoration: none; color: white;">Relatórios</a>
                 </p>
 
             </details>

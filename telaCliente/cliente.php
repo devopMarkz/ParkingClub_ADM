@@ -26,7 +26,7 @@
                     </p>
 
                     <p style="position: relative; top: 45px"> 
-                        <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorio.php" style="text-decoration: none; color: white;">Relatórios</a>
+                        <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorios.php" style="text-decoration: none; color: white;">Relatórios</a>
                     </p>
             </details>
         </nav>
@@ -47,12 +47,12 @@
     <main class="container-principal-cliente">
             <div class="container-principal-cliente__fundo-cards">
 
-                <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorio.php" class="container-principal-cliente__fundo-cards__card">
+                <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorios.php" class="container-principal-cliente__fundo-cards__card">
                     <img src="../componentes/images/relatorio_icon.png" alt="" srcset="" style="width: 80px; height: 80px"> 
                     <p> RELATÓRIOS </p>
                 </a>
 
-                <a href="SUBSTITUIR/telaCliente/pagarSaida.php" class="container-principal-cliente__fundo-cards__card">
+                <a href="##" class="container-principal-cliente__fundo-cards__card">
                     <img src="../componentes/images/camera_icon.png" alt="" srcset="" style="width: 80px; height: 80px">
                     <p> CÂMERAS </p>
                 </a>
