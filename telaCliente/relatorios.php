@@ -55,7 +55,7 @@
                 </a>
 
                 <a href="http://localhost/seminarioTematico_ParkingClub-ADM/telaCliente/relatorio-entrada-saida.php" class="container-principal-cliente__fundo-cards__card">
-                    <img src="../componentes/images/camera_icon.png" alt="" srcset="" style="width: 80px; height: 80px">
+                    <img src="../componentes/images/estacionamento.svg" alt="" srcset="" style="width: 80px; height: 80px">
                     <p> RELATÓRIO ESTACIONAMENTO </p>
                 </a>
 
